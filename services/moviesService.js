@@ -23,8 +23,28 @@ async function getMovieByIdService(id){
 }
 
 
+async function insertMovieService(movie){
+    try{
+        const moviesDB = await db.insertMovieDB(movie);
+        return moviesDB
+    }catch(error){
+
+    }
+}
+
+async function deleteMovieService(movie){
+    try{
+        console.log(movie)
+        await db.deleteMovieDB(movie)
+    }catch(error){
+        throw new Error('Error deleteMovieService')
+    }
+
+}
 
 module.exports ={
     getAllMoviesService,
-    getMovieByIdService
+    getMovieByIdService,
+    insertMovieService,
+    deleteMovieService
 }
