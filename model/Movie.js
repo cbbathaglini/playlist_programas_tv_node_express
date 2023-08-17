@@ -6,6 +6,11 @@ class Filme{
         this.ano = ano
     }
 
+
+    static convertClass(row){
+        return new Movie(row.idFilme,row.nome,row.duracao,row.ano)
+    }
+
 }
 
 module.exports = Filme
