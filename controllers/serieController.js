@@ -31,7 +31,6 @@ async function registrateSerie(req,res) {
     try{
        
         const serie = new Serie(null,req.body.nome,req.body.temporadas,req.body.ano)
-        //console.log(serie)
         const newSerie = await registrateSerieService(serie)
         res.send(newSerie)
     }catch(error){

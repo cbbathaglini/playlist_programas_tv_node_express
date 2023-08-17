@@ -1,6 +1,6 @@
 const fs = require('fs')
 const TVSeriesDatabase = require('../repository/TVSeriesDatabase')
-const Serie = require('../model/Filme')
+const Serie = require('../model/Movie')
 const db = new TVSeriesDatabase();
 
 async function getAllSeriesService(){

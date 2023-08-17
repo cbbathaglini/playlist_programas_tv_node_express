@@ -1,11 +1,11 @@
 const fs = require('fs')
-const {startConnection,stopConnection} = require('../config/database')
-const Serie = require('../model/Filme')
+const Database = require('../config/database')
+const Serie = require('../model/Movie')
 
 class TVSeriesDatabase {
 
   constructor() {
-    this.db = startConnection(); // Set up your database connection
+    this.db = new Database().createDatabaseConnection()
   } 
 
   async getAllSeriesDB(){
