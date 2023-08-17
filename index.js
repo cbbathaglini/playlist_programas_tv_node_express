@@ -1,6 +1,7 @@
 const e = require("express")
 const express = require("express")
-const rotaSerie = require("./rota/serie/serie")
+const routeSerie = require("./route/serie")
+const routeMovie = require("./route/movie")
 
 const cors = require("cors")
 
@@ -10,7 +11,8 @@ app.use(cors({origin: "*"}))
 const port = 8011
 
 
-app.use("/series", rotaSerie)
+app.use("/series", routeSerie)
+app.use("/movies", routeMovie)
 
 
 app.listen(port, () =>{
